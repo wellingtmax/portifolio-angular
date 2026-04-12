@@ -1,0 +1,124 @@
+/* =======================
+   FOOTER GERAL
+======================= */
+.footer {
+  background: linear-gradient(90deg, #2a66d6bb,#000000, #db0c0caf);
+  color: #fff;
+  padding: 20px 15px 10px; /* antes estava grande */
+  margin-top: auto;
+
+  /* efeito premium */
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 -5px 30px rgba(0, 68, 255, 0.603);
+}
+
+/* =======================
+   CONTAINER
+======================= */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 15px; /* diminui espaço */
+}
+
+/* =======================
+   BRAND (TECNOLOGIAS)
+======================= */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-brand p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* Ícones das tecnologias */
+.footer-brand img {
+  display: inline-block;
+}
+
+.footer-brand img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #22c55e);
+}
+
+/* =======================
+   REDES SOCIAIS
+======================= */
+.footer-social {
+  text-align: center;
+}
+
+.footer-social h3 {
+  margin-bottom: 10px;
+}
+
+/* Container dos ícones */
+.icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Ícones */
+.icons img {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Hover bonito */
+.icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #ebec95);
+}
+
+/* =======================
+   FOOTER BOTTOM
+======================= */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-bottom a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* ======================= 
+   TECH ICONS (DENTRO DO BRAND)
+======================= */
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap; /* quebra só se precisar */
+  gap: 10px;
+  align-items: center;
+}
+
+/* deixa menor e mais elegante */
+.tech-icons img {
+  width: 30px;
+  transition: 0.3s;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #22c55e);
+}
