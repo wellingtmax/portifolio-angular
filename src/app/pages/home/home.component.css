@@ -188,6 +188,14 @@
     }
 }
 
+.left img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: 5px;
+    bottom: 2px;
+}
+
 .right {
     right: 10px;
     border-radius: 50%;
@@ -210,6 +218,13 @@
             0 0 10px #ff0000,
             0 0 20px #ff0000;
     }
+}
+.right img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: 5px;
+    bottom: 2px;
 }
 
 .card-image {
