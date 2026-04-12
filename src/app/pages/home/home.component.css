@@ -32,7 +32,7 @@
 }
 
 .carr {
-    width: 1280px;
+    width: 100%;
     border-bottom: 1px solid  #5388e9;
     border-top: 1px solid #ff0000be;
 }
@@ -41,27 +41,139 @@
     display: block;
     white-space: nowrap;
     font-weight: bold;
+    margin-right: 50px;
     animation: deslizar 5s linear infinite;
 }
 
 @keyframes deslizar {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
         color: #ff0101;
-        text-shadow: 2px 2px 5px rgba(0, 60, 255, 0.801);
+        text-shadow: 2px 20px 30px #000305;
     }
 
     to {
-        transform: translateX(100%);
+        transform: translateX(110%);
         color: #0046f8;
-        text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.938);
+        text-shadow: 2px 2px 20px #f80000;
     }
 }
+/* ____________________________CARDS_________________________________ */
+.card-pro {
+    background: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
 
-/* .j {
-    width: 350px;
-    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
     position: relative;
-    left: 800px;
-    bottom: 400px;
-} */
+    margin: 3px;
+
+    max-width: 300px;
+
+    transition: 0.3s;
+    cursor: pointer;
+
+    border: 1px solid #5388e9;
+}
+
+/* BORDA */
+.card-pro::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 15px;
+
+  background: linear-gradient(
+    50deg,
+    transparent,
+    #0b50e6cc,
+    #c01818d0,
+    #0b50e6cc,
+    transparent
+  );
+
+  opacity: 0;
+  transition: 0.3s;
+
+  z-index: 0;
+}
+
+/* animação */
+.card-pro:hover::before {
+  opacity: 1;
+  animation: bordaAnimada 2s linear infinite;
+}
+
+/* conteúdo acima */
+.card-pro > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* keyframes */
+@keyframes bordaAnimada {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.card-divisor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+/* imagem */
+.card-pro img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* conteudo */
+.card-content {
+    padding: 25px;
+    color: white;
+}
+
+/* TITULO */
+.card-content h2 {
+    margin-bottom: 6px;
+}
+
+/* DESCRIÇÃO */
+.card-content p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 10px;
+}
+
+.tags span {
+    background: #2c78eb;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* BOTOES */
+
+/* HOVER */
+.card-pro:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+}

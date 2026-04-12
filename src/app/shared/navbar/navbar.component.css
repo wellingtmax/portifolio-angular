@@ -5,6 +5,10 @@
     padding: 20px;
     background: linear-gradient(90deg, #2a66d6af,#000000, #db0c0cde);
     color: #fff;
+
+    /* efeito premium */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 5px 30px rgba(255, 0, 0, 0.603);
 }
 
 ul {
@@ -27,9 +31,8 @@ a {
 }
 
 .profile-image {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -41,6 +44,6 @@ a {
     border: 1px solid #1130dd93;
     box-shadow: 0 -35px 80px rgb(17, 0, 255);
     position: relative;
-    animation: fadeIn 1s ease-in-out;
-    top: 90px;
+    bottom: 28px;
+    right: 30px;
 }
