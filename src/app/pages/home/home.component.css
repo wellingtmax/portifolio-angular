@@ -19,7 +19,7 @@
     font-size: 54px;
     margin-bottom: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: linear-gradient(90deg, #5388e9,#19ff04, #db0c0cde);
+    background: linear-gradient(90deg, #5388e9, #19ff04, #db0c0cde);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -33,7 +33,7 @@
 
 .carr {
     width: 100%;
-    border-bottom: 1px solid  #5388e9;
+    border-bottom: 1px solid #5388e9;
     border-top: 1px solid #ff0000be;
 }
 
@@ -58,7 +58,31 @@
         text-shadow: 2px 2px 20px #f80000;
     }
 }
-/* ____________________________CARDS_________________________________ */
+
+/* carocel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* trilhos */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+
+    scrollbar-width: none; /* Firefox */
+}
+
+/* remove barra de scroll */
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* cards */
 .card-pro {
     background: rgb(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
@@ -68,7 +92,10 @@
     position: relative;
     margin: 3px;
 
-    max-width: 300px;
+    min-width: 280px;
+    max-width: 280px;
+
+    flex: 0 0 auto;
 
     transition: 0.3s;
     cursor: pointer;
@@ -76,104 +103,117 @@
     border: 1px solid #5388e9;
 }
 
-/* BORDA */
-.card-pro::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 15px;
+.card-pro:hover .card-content h2 {
+    color: #22c55e;
 
-  background: linear-gradient(
-    50deg,
-    transparent,
-    #0b50e6cc,
-    #c01818d0,
-    #0b50e6cc,
-    transparent
-  );
-
-  opacity: 0;
-  transition: 0.3s;
-
-  z-index: 0;
+    text-shadow:
+        0 0 10px #c52222,
+        0 0 20px #c52222;
 }
 
-/* animação */
-.card-pro:hover::before {
-  opacity: 1;
-  animation: bordaAnimada 2s linear infinite;
-}
-
-/* conteúdo acima */
-.card-pro > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* keyframes */
-@keyframes bordaAnimada {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
-
-.card-divisor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-
-}
-
-/* imagem */
-.card-pro img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-/* conteudo */
 .card-content {
-    padding: 25px;
+    padding: 15px;
     color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* TITULO */
 .card-content h2 {
-    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #0b50e6;
+
+    text-shadow:
+        0 0 5px #ff0000fb,
+        0 0 10px #ff0000;
 }
 
-/* DESCRIÇÃO */
 .card-content p {
     font-size: 14px;
     color: #ccc;
-    margin-bottom: 15px;
+
+    line-height: 1.4;
+
+    text-align: justify;
 }
 
-/* TAGS */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin: 10px;
-}
+.tag {
+    background: rgba(11, 80, 230, 0.2);
 
-.tags span {
-    background: #2c78eb;
-    padding: 5px 8px;
-    border-radius: 8px;
+    border: 1px solid #0b50e6;
+    border-radius: 20px;
+
+    padding: 5px 10px;
+
     font-size: 12px;
+    color: #0b50e6;
+
+    transition: 0.3s;
+    margin: 3px;
 }
 
-/* BOTOES */
+.tag:hover {
+    background: #0b50e6;
+    color: white;
 
-/* HOVER */
-.card-pro:hover {
-    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 0 10px #0b50e6,
+        0 0 20px #0b50e6;
+}
 
-    box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.2),
-        0 6px 20px rgba(0, 0, 0, 0.19);
+.left {
+    left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: #0046f886;
+    color: white;
+    font-size: 25px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: 0.3s;
+
+    &:hover {
+        background: rgba(0, 132, 255, 0.555);
+        box-shadow:
+            0 0 10px #0b50e6,
+            0 0 20px #0b50e6;
+    }
+}
+
+.right {
+    right: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: #ff0000c5;
+    color: white;
+    font-size: 25px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: 0.3s;
+
+    &:hover {
+        background: rgba(255, 0, 0, 0.747);
+        box-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #ff0000;
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }

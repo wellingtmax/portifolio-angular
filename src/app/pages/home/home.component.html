@@ -8,136 +8,27 @@
         <p style="font-weight: bold; font-size: 25px;">D e s e n v o l v e d o r &nbsp;&nbsp;&nbsp; F U L L - S T A C K
         </p>
     </div>
-    <div class="card-divisor">
-        <div class="card-pro">
 
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
+    <div class="carousel">
+        <button class="btn left" (click)="scrollLeft()"><</button>
+                <div class="carousel-track" #carouselTrack>
+
+                    <!-- os cards aqui -->
+                    <div class="card-pro" *ngFor="let item of carouselItems">
+                        <img [src]="item.img" alt="projetos" class="card-image">
+
+                        <div class="card-content">
+                            <h2>{{ item.titulo }}</h2>
+                            <p>{{ item.descricao }}</p>
+                            <div class="tags">
+                                <span class="tag" *ngFor="let tag of item.tags">
+                                    {{ tag }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <button class="btn right" (click)="scrollRight()">></button>
             </div>
-        </div>
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-        <div class="card-pro">
-
-            <img src="projetos/j.png" alt="projetos">
-            <div class="card-content">
-                <h2>Projetos</h2>
-                <p>Confira meus projetos mais recentes e veja como aplico minhas habilidades em desenvolvimento web para
-                    criar soluções inovadoras e funcionais.</p>
-                <div class="tags">
-                    <span class="tag">Angular</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                </div>
-            </div>
-        </div>
-                    
-
-    </div>
-
-
-
-
 
 </section>
