@@ -10,6 +10,10 @@ import { AfterViewInit } from '@angular/core';
 export class SobreComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
+    // ✅ Verificar se estamos no navegador (não no servidor SSR)
+    if (typeof document === 'undefined') {
+      return;
+    }
 
     // ✨ DIGITANDO
     const text = "Sobre Mim";
