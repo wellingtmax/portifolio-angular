@@ -8,21 +8,20 @@
     padding: 20px;
     margin-top: 20px;
 }
+                      
+.home-content h1 {
+    font-size: 64px;
+    font-family: fantasy;
+    background: linear-gradient(450deg, #1100ff, #ff0000b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
 .home-content h3 {
     font-size: 30px;
     font-family: cursive;
     color: rgb(213, 213, 253);
-}
-
-.home-content h1 {
-    font-size: 54px;
-    margin-bottom: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: linear-gradient(90deg, #5388e9, #19ff04, #db0c0cde);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 .home-content p {
@@ -43,6 +42,7 @@
     font-weight: bold;
     margin-right: 50px;
     animation: deslizar 5s linear infinite;
+    color: aqua;
 }
 
 @keyframes deslizar {
@@ -167,8 +167,8 @@
 .left {
     left: 10px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     background: #0046f886;
     color: white;
@@ -192,15 +192,14 @@
     width: 40px;
     height: 40px;
     position: relative;
-    right: 5px;
-    bottom: 2px;
+    right: 3px;
 }
 
 .right {
     right: 10px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     background: #ff0000c5;
     color: white;
@@ -223,8 +222,7 @@
     width: 40px;
     height: 40px;
     position: relative;
-    right: 5px;
-    bottom: 2px;
+    right: 3px;
 }
 
 .card-image {

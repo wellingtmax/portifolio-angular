@@ -29,6 +29,30 @@ export class HomeComponent {
       descricao: 'Análise com inteligência artificial...',
       img: 'projetos/pro4.jpg',
       tags: ['Python', 'ML']
+    },
+    {
+      titulo: 'IA Futebol',
+      descricao: 'Análise com inteligência artificial...',
+      img: 'projetos/pro4.jpg',
+      tags: ['Python', 'ML']
+    },
+    {
+      titulo: 'IA Futebol',
+      descricao: 'Análise com inteligência artificial...',
+      img: 'projetos/pro4.jpg',
+      tags: ['Python', 'ML']
+    },
+    {
+      titulo: 'IA Futebol',
+      descricao: 'Análise com inteligência artificial...',
+      img: 'projetos/pro4.jpg',
+      tags: ['Python', 'ML']
+    },
+    {
+      titulo: 'IA Futebol',
+      descricao: 'Análise com inteligência artificial...',
+      img: 'projetos/pro4.jpg',
+      tags: ['Python', 'ML']
     }
   ];
 

@@ -11,6 +11,15 @@
     box-shadow: 0 5px 30px rgba(255, 0, 0, 0.603);
 }
 
+.titulo-dev {
+  background: linear-gradient(45deg, #ff0000, #001aff);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
 ul {
     list-style: none;
     display: flex;
