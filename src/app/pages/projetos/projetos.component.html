@@ -1,1 +1,24 @@
-<p>projetos works!</p>
+<div class="projeto-grid">
+  <div class="card-pro" *ngFor="let projeto of meusProjetos" (click)="abrirDialog(projeto)">
+    
+    <img [src]="projeto.imagemUrl" [alt]="projeto.titulo" class="card-image">
+    
+    <div class="card-content">
+      <h2>{{ projeto.titulo }}</h2>
+      <p>{{ projeto.descricaoCurta }}</p>
+      
+      <div class="tags">
+        <span class="tag" *ngFor="let tech of projeto.tecnologias">
+          {{ tech }}
+        </span>
+      </div>
+    </div>
+
+    <div class="card-footer">
+       <span class="view-details">CLIQUE PARA DETALHES</span>
+       <a class="github-link" [href]="projeto.linkGithub" target="_blank" (click)="$event.stopPropagation()">
+         <mat-icon>code</mat-icon>
+       </a>
+    </div>
+  </div>
+</div>

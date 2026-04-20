@@ -1,0 +1,121 @@
+/* Container que segura os cards na página */
+.projeto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* O Card igual ao seu carousel */
+.card-pro {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid #5388e9;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-pro:hover {
+  transform: translateY(-8px);
+  border-color: #22c55e;
+  /* Muda para verde no hover */
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  color: white;
+  flex-grow: 1;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0b50e6;
+  text-shadow: 0 0 5px #ff0000fb, 0 0 10px #ff0000;
+  margin-bottom: 10px;
+}
+
+/* Efeito Hover no Título */
+.card-pro:hover .card-content h2 {
+  color: #22c55e;
+  text-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* Tags estilo neon azul */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tag {
+  background: rgba(11, 80, 230, 0.1);
+  border: 1px solid #0b50e6;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #0b50e6;
+  margin: 2px;
+
+  &:hover {
+    background: #0b50e6;
+    color: white;
+
+    box-shadow:
+      0 0 10px #0b50e6,
+      0 0 20px #0b50e6;
+  }
+}
+
+/* Rodapé do card para o ícone de código */
+.card-footer {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(83, 136, 233, 0.2);
+}
+
+.view-details {
+  font-size: 10px;
+  color: #5388e9;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #0b50e6;
+  transition: 0.3s;
+  &:hover {
+    color: #22c55e;
+    text-shadow: 0 0 5px #22c55e, 0 0 10px #22c55e;
+    border-color: #22c55e;
+  }
+}
+
+.github-link {
+  color: white;
+  transition: 0.3s;
+}
+
+.github-link:hover {
+  color: #22c55e;
+}

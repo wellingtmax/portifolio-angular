@@ -43,7 +43,7 @@ export class MatrixRainComponent implements AfterViewInit {
     this.ctx.fillRect(0, 0, this.canvasRef.nativeElement.width, this.canvasRef.nativeElement.height);
 
     // Estilo do texto
-    this.ctx.fillStyle = '#0F0';//Verde Matrix
+    this.ctx.fillStyle = 'rgb(0, 255, 0)';//Verde Matrix
     this.ctx.font = this.fontSinze + 'px monospace';
 
     for (let i = 0; i < this.drops.length; i++) {
