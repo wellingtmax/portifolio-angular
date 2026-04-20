@@ -12,7 +12,7 @@
 .home-content h1 {
     font-size: 64px;
     font-family: fantasy;
-    background: linear-gradient(450deg, #1100ff, #ff0000b0);
+    background: linear-gradient(180deg, #0011ff,#ffffffda, #cff3007e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

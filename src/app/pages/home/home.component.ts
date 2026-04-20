@@ -10,13 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
 
-  // 🔥 DADOS DOS CARDS
+  // DADOS DOS CARDS
   items = [
     {
       titulo: 'Projetos',
       descricao: 'Veja meus projetos desenvolvidos...',
       img: 'projetos/pro1.jpg',
-      tags: ['Angular', 'Node']
+      tags: ['Angular', 'Node', 'MySQL', 'ML']
     },
     {
       titulo: 'Sistema Fitness',
@@ -31,29 +31,17 @@ export class HomeComponent {
       tags: ['Python', 'ML']
     },
     {
-      titulo: 'IA Futebol',
+      titulo: 'Jogo de Cartas',
       descricao: 'Análise com inteligência artificial...',
       img: 'projetos/pro4.jpg',
       tags: ['Python', 'ML']
     },
     {
-      titulo: 'IA Futebol',
+      titulo: 'Jogo de Cartas',
       descricao: 'Análise com inteligência artificial...',
       img: 'projetos/pro4.jpg',
       tags: ['Python', 'ML']
     },
-    {
-      titulo: 'IA Futebol',
-      descricao: 'Análise com inteligência artificial...',
-      img: 'projetos/pro4.jpg',
-      tags: ['Python', 'ML']
-    },
-    {
-      titulo: 'IA Futebol',
-      descricao: 'Análise com inteligência artificial...',
-      img: 'projetos/pro4.jpg',
-      tags: ['Python', 'ML']
-    }
   ];
 
   get carouselItems() {
