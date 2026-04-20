@@ -29,7 +29,7 @@ export class ProjetosComponent {
       tecnologias: ['Python', 'Pygame'],
       imagemUrl: 'projetos/tetris.png', // Verifique se o arquivo está na pasta assets
       linkGithub: 'https://github.com/wellingtmax/tetris_py.git',
-      linkDemo: ''
+      linkDemo: 'https://tetrispy--wellingtmax.replit.app/'
     }
     // Adicione outros projetos aqui...
   ];

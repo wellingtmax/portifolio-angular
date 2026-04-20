@@ -19,9 +19,13 @@ import { MatButtonModule } from '@angular/material/button';
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);"
       >{{ data.tecnologias.join(', ') }}</span>
     </mat-dialog-content>
+    <mat-dialog-actions align="center">
+    <a mat-raised-button color="primary" href="{{ data.linkDemo }}" target="_blank">Jogue Agora</a>
+    </mat-dialog-actions>
+    
     <mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>Fechar</button>
-      <a mat-raised-button color="primary" [href]="data.linkGithub" target="_blank">Ver no GitHub</a>
+    <button mat-button mat-dialog-close>Fechar</button>
+    <a mat-raised-button color="primary" [href]="data.linkGithub" target="_blank">Ver no GitHub</a>
     </mat-dialog-actions>
   `
 })
