@@ -1,7 +1,9 @@
 <section class="home">
     <div class="home-content">
         <h3>Olá, eu sou</h3>
-        <h1>J &nbsp; H &nbsp; O &nbsp; T &nbsp; A</h1>
+        <!-- <h1>J &nbsp; H &nbsp; O &nbsp; T &nbsp; A</h1> -->
+         <h1 class="typing3" style="letter-spacing: 30px;"></h1>
+
         <div class="carr">
             <p class="font">01001010 &nbsp; 01001000 &nbsp; 01001111 &nbsp; 01010100 &nbsp; 01000001</p>
         </div>
@@ -12,17 +14,17 @@
         <button class="btn left" (click)="scrollLeft()">
             <img src="icons/left1.png" alt="">
         </button>
-                <div class="carousel-track" #carouselTrack>
+                <div class="carousel-track" #carouselTrack routerLink="projetos">
 
                     <!-- os cards aqui -->
                     <div class="card-pro" *ngFor="let item of carouselItems">
-                        <img [src]="item.img" alt="projetos" class="card-image">
+                        <img [src]="item.imagemUrl" alt="projetos" class="card-image">
 
                         <div class="card-content">
                             <h2>{{ item.titulo }}</h2>
-                            <p>{{ item.descricao }}</p>
+                            <p>{{ item.descricaoCurta }}</p>
                             <div class="tags">
-                                <span class="tag" *ngFor="let tag of item.tags">
+                                <span class="tag" *ngFor="let tag of item.tecnologias">
                                     {{ tag }}
                                 </span>
                             </div>
@@ -35,3 +37,19 @@
             </div>
 
 </section>
+
+<!-- <main class="sobre">
+    <h2>Historico</h2>
+    <div class="sobre-content">
+        <img src="profile/notebook.png" alt="" class="sobre-image">
+        <p>Sou um desenvolvedor Full Stack apaixonado por criar soluções 
+            inovadoras e eficientes. Com experiência em diversas tecnologias,
+             estou sempre em busca de novos desafios para aprimorar 
+             minhas habilidades e contribuir para projetos impactantes. 
+             Meu objetivo é transformar ideias em realidade, 
+             entregando resultados de alta qualidade e superando as expectativas dos clientes.
+        </p>
+    </div>
+
+
+</main> -->

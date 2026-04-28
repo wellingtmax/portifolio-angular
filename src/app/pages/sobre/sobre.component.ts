@@ -29,6 +29,19 @@ export class SobreComponent implements AfterViewInit {
       }
     }, 100);
 
+    const text2 = "Timeline";
+    let j = 0;
+    const el2 = document.querySelector('.timeline h1') as HTMLElement;
+
+    const typing2 = setInterval(() => {
+      if (j < text2.length) {
+        el2.innerHTML += text2.charAt(j);
+        j++;
+      } else {
+        clearInterval(typing2);
+      }
+    }, 100);
+
     // 🔢 CONTADOR
     const counters = document.querySelectorAll('.counter');
 

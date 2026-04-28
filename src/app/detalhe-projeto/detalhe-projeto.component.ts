@@ -20,7 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
       >{{ data.tecnologias.join(', ') }}</span>
     </mat-dialog-content>
     <mat-dialog-actions align="center">
-    <a mat-raised-button color="primary" href="{{ data.linkDemo }}" target="_blank">Jogue Agora</a>
+    <a mat-raised-button color="primary" href="{{ data.linkDemo }}" target="_blank">Entrar</a>
     </mat-dialog-actions>
     
     <mat-dialog-actions align="end">

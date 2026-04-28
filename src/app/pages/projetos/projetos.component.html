@@ -1,4 +1,6 @@
+<h1>Meus Projetos</h1>
 <div class="projeto-grid">
+  
   <div class="card-pro" *ngFor="let projeto of meusProjetos" (click)="abrirDialog(projeto)">
     
     <img [src]="projeto.imagemUrl" [alt]="projeto.titulo" class="card-image">

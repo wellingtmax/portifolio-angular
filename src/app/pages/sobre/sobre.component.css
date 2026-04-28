@@ -136,3 +136,10 @@
     0 2px 1px #0011ff,
     0 2px 1px #0011ff;
 }
+
+.timeline h1 {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #0b50e6, 0 0 20px #0b50e6;
+  text-decoration: underline rgb(30, 255, 0);
+}

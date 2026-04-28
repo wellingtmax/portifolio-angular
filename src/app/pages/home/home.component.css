@@ -102,11 +102,15 @@
     cursor: pointer;
 
     border: 1px solid #5388e9;
+    transition: 1.2s ease;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: #0011ff 0px 0px 10px, #5eff00 0px 0px 20px;
+        }
 }
 
 .card-pro:hover .card-content h2 {
     color: #22c55e;
-
     text-shadow:
         0 0 10px #c52222,
         0 0 20px #c52222;
@@ -128,8 +132,8 @@
     color: #0b50e6;
 
     text-shadow:
-        0 0 5px #ff0000fb,
-        0 0 10px #ff0000;
+        0 0 2px #01030c,
+        0 0 5px #0080ff;
 }
 
 .card-content p {
@@ -231,3 +235,48 @@
     height: 200px;
     object-fit: cover;
 }
+/* ===================================================================================================== */
+/* o sobres */
+/* a imagem ficara justificado do lado esquerdo e o texto vai ficar ao lado dele */
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+    gap: 50px;
+}
+
+.sobre-content {
+    
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 20px;
+}
+
+.sobre h2 {
+    color: #0400f8;
+    text-shadow: #00c6f8 0px 0px 5px, #00bef8 0px 0px 10px;
+    font-size: 36px;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sobre-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #22c55e;
+    text-shadow: #00f83e 0px 0px 5px, #004ff8 0px 0px 10px;
+}
+
+.sobre-content img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: #22c55e71 0px 0px 10px, #22c55e6e 0px 0px 20px;
+    transition: 1.0s;
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: #22c55e 0px 0px 10px, #22c55e 0px 0px 10px;
+    }
+}
+
+

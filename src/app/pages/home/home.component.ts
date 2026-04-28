@@ -1,51 +1,42 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MEUS_PROJETOS } from '../../data/projetos.data';
+import { RouterLink } from "@angular/router";
+import { AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+
+  ngAfterViewInit(): void {
+    //escrevendo jhota
+    const text3 = "J H O T A";
+    let i = 0;
+    const el3 = document.querySelector('.typing3') as HTMLElement;
+
+    const typing3 = setInterval(() => {
+      if (i < text3.length) {
+        el3.innerHTML += text3.charAt(i);
+        i++;
+      } else {
+        clearInterval(typing3);
+      }
+    }, 100);
+  }
+
 
   // DADOS DOS CARDS
-  items = [
-    {
-      titulo: 'Projetos',
-      descricao: 'Veja meus projetos desenvolvidos...',
-      img: 'projetos/pro1.jpg',
-      tags: ['Angular', 'Node', 'MySQL', 'ML']
-    },
-    {
-      titulo: 'Sistema Fitness',
-      descricao: 'App de treino completo...',
-      img: 'projetos/pro2.webp',
-      tags: ['Flutter', 'Firebase']
-    },
-    {
-      titulo: 'IA Futebol',
-      descricao: 'Análise com inteligência artificial...',
-      img: 'projetos/pro4.jpg',
-      tags: ['Python', 'ML']
-    },
-    {
-      titulo: 'Jogo de Cartas',
-      descricao: 'Análise com inteligência artificial...',
-      img: 'projetos/pro4.jpg',
-      tags: ['Python', 'ML']
-    },
-    {
-      titulo: 'Jogo de Cartas',
-      descricao: 'Análise com inteligência artificial...',
-      img: 'projetos/pro4.jpg',
-      tags: ['Python', 'ML']
-    },
-  ];
+  items = MEUS_PROJETOS;
+
 
   get carouselItems() {
-    return [...this.items, ...this.items]; // duplica os itens para rolagem infinita
+    // deixei os intens soa para demonstração, depois tirar
+    return [...this.items,]; // duplica os itens para rolagem infinita
   }
 
   @ViewChild('carouselTrack') carouselTrack!: ElementRef<HTMLDivElement>;
@@ -83,4 +74,5 @@ export class HomeComponent {
       }
     }, 300);
   }
+
 }
