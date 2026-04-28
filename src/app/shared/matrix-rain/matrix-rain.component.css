@@ -6,3 +6,7 @@ canvas {
     z-index: -1;
     background-color: black;
 }
+
+.jhota {
+    text-shadow: rgba(49, 9, 9, 0.671) 0 0 10px, rgba(39, 21, 21, 0.719) 0 0 5px;
+}

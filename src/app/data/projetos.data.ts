@@ -59,9 +59,9 @@ export const MEUS_PROJETOS: Projeto[] = [
         descricaoCurta: 'Aplicativo de previsão do tempo com API.',
         descricaoCompleta: 'Projeto desenvolvido para criar um aplicativo de previsão do tempo utilizando uma API de clima.',
         tecnologias: ['Flutter', 'API'],
-        imagemUrl: 'projetos/clima.jpg',
-        linkGithub: 'https://github.com/wellingtmax/app_clima.git',
-        linkDemo: 'https://appclima--wellingtmax.replit.app/'
+        imagemUrl: 'projetos/clima.jpeg',
+        linkGithub: 'https://github.com/wellingtmax/app-clima',
+        linkDemo: 'https://stately-jalebi-5c13c7.netlify.app/'
 
     },
     {
