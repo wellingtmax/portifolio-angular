@@ -115,7 +115,7 @@ export const MEUS_PROJETOS: Projeto[] = [
     descricaoCurta: 'Interface web para consulta de informações meteorológicas.',
     descricaoCompleta: 'Aplicação desenvolvida com Angular e integração de API, com uma experiência direta para consulta de informações do tempo.',
     tecnologias: ['Angular', 'TypeScript', 'API'],
-    imagemUrl: '/projetos/clima.jpeg',
+    imagemUrl: '../../../../public/projetos/clima.jpeg',
     linkGithub: 'https://github.com/wellingtmax/app-clima',
     linkDemo: 'https://stately-jalebi-5c13c7.netlify.app/',
     categoria: 'Plataformas',
