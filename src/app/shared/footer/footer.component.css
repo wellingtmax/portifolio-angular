@@ -1,125 +1,13 @@
-/* =======================
-   FOOTER GERAL
-======================= */
-.footer {
-  background: linear-gradient(90deg, #2a66d6bb,#000000, #db0c0caf);
-  color: #fff;
-  padding: 20px 15px 10px; /* antes estava grande */
-  margin-top: auto;
-
-  /* efeito premium */
-  border-top: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 -5px 30px rgba(0, 68, 255, 0.603);
-}
-
-/* =======================
-   CONTAINER
-======================= */
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 15px; /* diminui espaço */
-}
-
-/* =======================
-   BRAND (TECNOLOGIAS)
-======================= */
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-brand p {
-  font-size: 18px;
-  font-weight: 600;
-  color: #22c55e;
-}
-
-/* Ícones das tecnologias */
-.footer-brand img {
-  display: inline-block;
-}
-
-.footer-brand img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 8px #22c55e);
-}
-
-/* =======================
-   REDES SOCIAIS
-======================= */
-.footer-social {
-  text-align: center;
-}
-
-.footer-social h3 {
-  margin-bottom: 10px;
-}
-
-/* Container dos ícones */
-.icons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Ícones */
-.icons img {
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-/* Hover bonito */
-.icons img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 10px #ebec95);
-}
-
-/* =======================
-   FOOTER BOTTOM
-======================= */
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  font-size: 14px;
-  color: #ccc;
-}
-
-.footer-bottom a {
-  color: #22c55e;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* ======================= 
-   TECH ICONS (DENTRO DO BRAND)
-======================= */
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap; /* quebra só se precisar */
-  gap: 10px;
-  align-items: center;
-}
-
-/* deixa menor e mais elegante */
-.tech-icons img {
-  width: 30px;
-  transition: 0.3s;
-}
-
-.tech-icons img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 8px #22c55e);
-}
+.footer { border-top:1px solid var(--line); background:#06101d; margin-top:auto; }
+.footer-main { display:grid; grid-template-columns:2fr 1fr 1fr; gap:60px; padding-top:65px; padding-bottom:55px; }
+.footer-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.footer-logo img { border-radius:10px; }
+.footer-logo strong { font-family:Manrope,Arial,sans-serif; font-size:23px; letter-spacing:-.05em; color:white; }
+.footer-logo strong span { color:#7ab4ff; }
+.footer-brand p { max-width:340px; color:var(--muted); line-height:1.8; font-size:14px; margin-top:19px; }
+.footer-column { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
+.footer-column h3 { font-size:14px; color:white; margin:6px 0 10px; }
+.footer-column a { text-decoration:none; color:var(--muted); font-size:13px; }
+.footer-column a:hover { color:var(--blue-soft); }
+.footer-bottom { padding-block:22px; display:flex; justify-content:space-between; gap:15px; border-top:1px solid var(--line); color:#8b9db4; font-size:12px; }
+@media(max-width:740px) { .footer-main { grid-template-columns:1fr 1fr; gap:35px; padding-block:45px; } .footer-brand { grid-column:1/-1; } .footer-bottom { flex-direction:column; } }
