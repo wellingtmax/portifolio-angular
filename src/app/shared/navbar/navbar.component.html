@@ -1,13 +1,19 @@
-<nav class="navbar">
-    <div class="card">
-    <img src="profile/eu1.png" alt="Foto de perfil" class="profile-image">
-</div>
-        <h2 class="titulo-dev" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">J °¹°°¹°¹° DEV</h2>
-
-    <ul>
-        <li><a routerLink="">Home</a></li>
-        <li><a routerLink="sobre">Sobre</a></li>
-        <li><a routerLink="projetos">Projetos</a></li>
-        <li><a routerLink="contato">Contato</a></li>
-    </ul>
-</nav>
+<header class="site-header">
+  <nav class="nav-shell container" aria-label="Navegação principal">
+    <a class="brand" routerLink="/" (click)="fecharMenu()" aria-label="JSTECH — Início">
+      <img src="/jstech-mark.svg" width="47" height="47" alt="" aria-hidden="true">
+      <span class="brand-wordmark"><strong>JS<span>TECH</span></strong><small>TECNOLOGIA &amp; SOLUÇÕES</small></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="alternarMenu()" [attr.aria-expanded]="menuAberto"
+            aria-controls="main-links" [attr.aria-label]="menuAberto ? 'Fechar menu' : 'Abrir menu'">
+      <span></span><span></span><span></span>
+    </button>
+    <div id="main-links" class="nav-links" [class.is-open]="menuAberto">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="fecharMenu()">Início</a>
+      <a routerLink="/sobre" routerLinkActive="active" (click)="fecharMenu()">Soluções</a>
+      <a routerLink="/projetos" routerLinkActive="active" (click)="fecharMenu()">Produtos e projetos</a>
+      <a routerLink="/contato" routerLinkActive="active" (click)="fecharMenu()">Contato</a>
+      <a class="header-cta" routerLink="/contato" (click)="fecharMenu()">Fale com a JSTECH <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+</header>
