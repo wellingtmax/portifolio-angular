@@ -33,12 +33,12 @@ npm run build
 - `src/app/pages/projetos/` — catálogo pesquisável por categorias
 - `src/app/pages/contato/` — canais de contato reais
 - `src/app/data/projetos.data.ts` — conteúdo dos produtos e projetos
-- `public/jstech-mark.svg` — **símbolo provisório** com azul e vermelho da paleta anterior do site
+- `public/projetos/jstech.png` — símbolo oficial enviado pelo autor; cabeçalho, Sobre, rodapé e favicon
 - `src/styles.css` — tokens da identidade JSTECH
 
 ## Orientações de manutenção
 
-1. Antes de publicar, substitua o símbolo provisório pelo **logotipo oficial JSTECH**, quando disponível, e ajuste as variáveis de cores para as cores oficiais da marca.
+1. A identidade visual oficial JSTECH utiliza azul-ciano, azul elétrico, branco e fundo escuro. Use o mesmo símbolo da pasta `public/projetos/jstech.png` em toda a comunicação.
 2. Mantenha as imagens reais dos produtos em `public/projetos/`.
 3. Cadastre apenas URLs de demonstração e repositórios públicos que realmente correspondam a cada projeto.
 4. Confirme os canais comerciais: o WhatsApp e o e-mail atuais foram preservados do site anterior.
