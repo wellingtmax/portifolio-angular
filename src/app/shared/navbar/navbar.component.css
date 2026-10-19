@@ -1,25 +1,42 @@
 :host { display:block; position:sticky; top:0; z-index:50; }
-.site-header { background:rgba(7,17,31,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(22px); }
-.nav-shell { min-height:78px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
-.brand { display:flex; align-items:center; gap:11px; text-decoration:none; flex-shrink:0; }
-.brand img { width:47px; height:47px; border-radius:12px; }
+.site-header { background:rgba(6,17,32,.96); border-bottom:1px solid rgba(4,204,247,.17); backdrop-filter:blur(22px); box-shadow:0 8px 28px rgba(0,0,0,.12); }
+.nav-shell { min-height:92px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
+.brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0; min-width:0; }
+.brand-logo { display:block; width:66px; height:66px; object-fit:cover; border-radius:50%; clip-path:circle(49% at center); background:#00030e; box-shadow:0 0 19px rgba(0,202,245,.15); }
 .brand-wordmark { display:flex; flex-direction:column; line-height:1; }
-.brand-wordmark strong { font-family:Manrope,Arial,sans-serif; font-size:23px; letter-spacing:-.07em; color:white; }
-.brand-wordmark strong span { color:#70a9ff; }
-.brand-wordmark small { font-size:8px; letter-spacing:.2em; font-weight:700; margin-top:8px; color:#95a9c7; }
-.nav-links { display:flex; align-items:center; gap:27px; }
-.nav-links > a { font-size:13px; color:#abbdd5; text-decoration:none; font-weight:700; transition:color .2s; }
+.brand-wordmark strong { font-family:Manrope,Arial,sans-serif; font-size:25px; letter-spacing:-.065em; color:#fafdff; }
+.brand-wordmark strong span { color:#08c9f4; }
+.brand-wordmark small { font-size:8px; letter-spacing:.21em; font-weight:800; margin-top:9px; color:#91b0cf; }
+.nav-links { display:flex; align-items:center; gap:23px; }
+.nav-links > a { font-size:13px; color:#bacbdf; text-decoration:none; font-weight:700; transition:color .2s; white-space:nowrap; }
 .nav-links > a:hover,.nav-links > a.active { color:#fff; }
-.nav-links > a.active:not(.header-cta) { box-shadow:0 2px 0 var(--red); padding-bottom:6px; margin-bottom:-6px; }
-.nav-links > a.header-cta { background:#204c92; color:white; padding:12px 16px; border:1px solid #3774d0; border-radius:9px; white-space:nowrap; }
-.header-cta span { padding-left:5px; color:#bad8ff; }
+.nav-links > a.active:not(.header-cta) { box-shadow:0 2px 0 #00c8f3; padding-bottom:6px; margin-bottom:-6px; }
+.nav-links > a.header-cta { background:linear-gradient(120deg,#075a9b,#067ebc); color:#fff; padding:12px 16px; border:1px solid #11bfea; border-radius:9px; white-space:nowrap; }
+.header-cta span { padding-left:5px; color:#9eecff; }
 .menu-toggle { display:none; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; background:transparent; border:1px solid var(--line); border-radius:9px; }
-.menu-toggle span { width:20px; height:2px; margin-left:10px; background:white; }
-@media(max-width:930px) {
-  .menu-toggle { display:flex; }
-  .nav-links { display:none; position:absolute; top:78px; left:0; right:0; background:#09182b; border-bottom:1px solid #234269; flex-direction:column; gap:0; align-items:stretch; padding:14px 20px 20px; box-shadow:0 24px 35px rgba(0,0,0,.4); }
-  .nav-links.is-open { display:flex; }
-  .nav-links > a { padding:14px 10px; }
-  .nav-links > a.active:not(.header-cta) { box-shadow:none; margin:0; padding:14px 10px; color:#90bfff; }
-  .nav-links > a.header-cta { text-align:center; margin-top:8px; }
+.menu-toggle span { width:20px; height:2px; margin-left:10px; background:#fff; }
+@media(max-width:1080px) {
+ .nav-links { gap:13px; }
+ .nav-links > a { font-size:12px; }
+ .brand-wordmark strong { font-size:22px; }
+ .brand-wordmark small { font-size:7px; }
+ .brand-logo { width:58px; height:58px; }
+}
+@media(max-width:950px) {
+ .nav-shell { min-height:80px; }
+ .brand-logo { width:60px; height:60px; }
+ .brand-wordmark strong { font-size:23px; }
+ .brand-wordmark small { font-size:8px; }
+ .menu-toggle { display:flex; }
+ .nav-links { display:none; position:absolute; top:80px; left:0; right:0; background:#09182b; border-bottom:1px solid #124e68; flex-direction:column; gap:0; align-items:stretch; padding:14px 20px 20px; box-shadow:0 24px 35px rgba(0,0,0,.4); }
+ .nav-links.is-open { display:flex; }
+ .nav-links > a { padding:14px 10px; font-size:14px; }
+ .nav-links > a.active:not(.header-cta) { box-shadow:none; margin:0; padding:14px 10px; color:#06cef7; }
+ .nav-links > a.header-cta { text-align:center; margin-top:8px; }
+}
+@media(max-width:380px) {
+ .brand { gap:8px; }
+ .brand-logo { width:50px; height:50px; }
+ .brand-wordmark strong { font-size:20px; }
+ .brand-wordmark small { letter-spacing:.12em; font-size:7px; }
 }
