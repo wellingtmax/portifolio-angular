@@ -289,3 +289,21 @@
 }
 
 
+
+/* Capas conceituais para projetos ainda sem captura de tela */
+.card-visual {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: radial-gradient(circle at 65% 32%, var(--accent), transparent 65%), linear-gradient(135deg,#061229,#17203d);
+}
+.visual-emoji { font-size: 60px; filter: drop-shadow(0 5px 15px rgba(0,0,0,.4)); }
+.visual-caption { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #e5efff; }
+@media (max-width: 700px) {
+  .card-pro { min-width: min(80vw, 350px); max-width: min(80vw, 350px); }
+  .typing3 { letter-spacing: 12px; font-size: 40px; }
+  .home-content { padding: 10px; }
+}
