@@ -1,54 +1,110 @@
-<section class="home">
-    <div class="home-content">
-        <h3>Olá, eu sou</h3>
-        <!-- <h1>J &nbsp; H &nbsp; O &nbsp; T &nbsp; A</h1> -->
-         <h1 class="typing3"></h1>
-        <div class="carr">
-            <p class="font">01001010 &nbsp; 01001000 &nbsp; 01001111 &nbsp; 01010100 &nbsp; 01000001</p>
-        </div>
-        <p style="font-weight: bold; font-size: 25px;">D e s e n v o l v e d o r &nbsp;&nbsp;&nbsp; F U L L - S T A C K</p>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-kicker"><span class="live-dot"></span> JSTECH · DESENVOLVIMENTO DE SOFTWARE</div>
+      <h1>Tecnologia que transforma <span>ideias em soluções.</span></h1>
+      <p class="hero-description">Desenvolvemos aplicativos, sistemas e plataformas digitais para simplificar processos, conectar pessoas e dar vida a novos negócios.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" routerLink="/projetos">Conheça nossos produtos <span aria-hidden="true">↗</span></a>
+        <a class="btn-secondary" routerLink="/contato">Solicitar uma solução <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-proof" aria-label="Áreas de atuação">
+        <span><i aria-hidden="true">✓</i> Aplicativos Android</span>
+        <span><i aria-hidden="true">✓</i> Sistemas web</span>
+        <span><i aria-hidden="true">✓</i> Automações</span>
+      </div>
     </div>
-
-    <div class="carousel">
-        <button class="btn left" (click)="scrollLeft()">
-            <img src="icons/left1.png" alt="">
-        </button>
-                <div class="carousel-track" #carouselTrack routerLink="projetos">
-
-                    <!-- os cards aqui -->
-                    <div class="card-pro" *ngFor="let item of carouselItems">
-                        <img [src]="item.imagemUrl" alt="projetos" class="card-image">
-
-                        <div class="card-content">
-                            <h2>{{ item.titulo }}</h2>
-                            <p>{{ item.descricaoCurta }}</p>
-                            <div class="tags">
-                                <span class="tag" *ngFor="let tag of item.tecnologias">
-                                    {{ tag }}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn right" (click)="scrollRight()">
-                    <img src="icons/next1.png" alt="">
-                </button>
+    <div class="hero-visual" aria-label="Vitrine dos produtos digitais JSTECH">
+      <div class="hero-halo" aria-hidden="true"></div>
+      <div class="visual-label"><span class="signal" aria-hidden="true"></span> ECOSSISTEMA JSTECH <span>01 / 03</span></div>
+      <div class="showcase-panel">
+        <div class="panel-chrome"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="panel-url">jstech / nossos produtos</span></div>
+        <div class="panel-body">
+          <div class="main-product">
+            <img src="/projetos/starttreino.png" alt="Apresentação do StartTreino" loading="eager">
+            <div><small>APLICATIVO EM DESTAQUE</small><strong>StartTreino</strong><p>Organização para evoluir com consistência.</p></div>
+          </div>
+          <div class="mini-product-grid">
+            <div class="mini-product">
+              <img src="/projetos/startplantao.png" alt="StartPlantão" loading="lazy">
+              <span>StartPlantão</span>
             </div>
-
+            <div class="mini-product">
+              <img src="/projetos/colaetroca.png" alt="Cola&Troca" loading="lazy">
+              <span>Cola&Troca</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visual-corner visual-corner-left" aria-hidden="true"></div>
+      <div class="visual-corner visual-corner-right" aria-hidden="true"></div>
+    </div>
+  </div>
 </section>
 
-<!-- <main class="sobre">
-    <h2>Historico</h2>
-    <div class="sobre-content">
-        <img src="profile/notebook.png" alt="" class="sobre-image">
-        <p>Sou um desenvolvedor Full Stack apaixonado por criar soluções 
-            inovadoras e eficientes. Com experiência em diversas tecnologias,
-             estou sempre em busca de novos desafios para aprimorar 
-             minhas habilidades e contribuir para projetos impactantes. 
-             Meu objetivo é transformar ideias em realidade, 
-             entregando resultados de alta qualidade e superando as expectativas dos clientes.
-        </p>
+<section class="capabilities">
+  <div class="container">
+    <div class="section-intro">
+      <div><span class="eyebrow">O QUE FAZEMOS</span><h2 class="section-heading">Soluções que acompanham <span>o seu ritmo.</span></h2></div>
+      <p>Do conceito ao produto, combinamos engenharia e visão de negócio para criar tecnologia útil e preparada para evoluir.</p>
     </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="service-index">01 / MOBILE</span><div class="service-icon" aria-hidden="true">▣</div>
+        <h3>Aplicativos móveis</h3><p>Experiências práticas e intuitivas para Android, com foco em performance e uso no dia a dia.</p>
+        <a routerLink="/projetos">Ver aplicativos <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="service-card">
+        <span class="service-index">02 / SISTEMAS</span><div class="service-icon" aria-hidden="true">⌘</div>
+        <h3>Sistemas para negócios</h3><p>Plataformas de gestão e soluções digitais para organizar operações e facilitar decisões.</p>
+        <a routerLink="/sobre">Conhecer soluções <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="service-card">
+        <span class="service-index">03 / AUTOMAÇÃO</span><div class="service-icon" aria-hidden="true">⚙</div>
+        <h3>Automação de processos</h3><p>Ferramentas para reduzir tarefas repetitivas, organizar fluxos e aproveitar melhor o tempo.</p>
+        <a routerLink="/contato">Conversar sobre um projeto <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </div>
+</section>
 
+<section class="featured">
+  <div class="container">
+    <div class="section-intro">
+      <div><span class="eyebrow">PORTFÓLIO DE PRODUTOS</span><h2 class="section-heading">Construídos para <span>resolver.</span></h2></div>
+      <a class="all-products" routerLink="/projetos">Explorar todos os projetos <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="product-grid">
+      <article class="product-card" *ngFor="let projeto of destaques">
+        <div class="product-image" [style.--product-color]="projeto.cor">
+          <img *ngIf="projeto.imagemUrl" [src]="projeto.imagemUrl" [alt]="'Imagem do projeto ' + projeto.titulo" loading="lazy">
+          <span *ngIf="!projeto.imagemUrl" class="product-monogram" aria-hidden="true">{{ projeto.icone }}</span>
+        </div>
+        <div class="product-description">
+          <div class="product-category"><span>{{ projeto.categoria }}</span><span class="product-state">{{ projeto.status }}</span></div>
+          <h3>{{ projeto.titulo }}</h3>
+          <p>{{ projeto.descricaoCurta }}</p>
+          <a *ngIf="projeto.linkDemo" [href]="projeto.linkDemo" target="_blank" rel="noopener noreferrer">Conhecer produto <span aria-hidden="true">↗</span></a>
+          <a *ngIf="!projeto.linkDemo" routerLink="/projetos">Ver detalhes <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-</main> -->
+<section class="manifesto">
+  <div class="container manifesto-layout">
+    <div><span class="eyebrow">NOSSO JEITO DE CRIAR</span><h2 class="section-heading">Menos complicação.<br><span>Mais possibilidades.</span></h2></div>
+    <div>
+      <p>Não se trata apenas de escrever código. É entender a necessidade, desenhar uma experiência clara e construir uma solução que faça sentido para quem vai utilizá-la.</p>
+      <a class="btn-secondary" routerLink="/sobre">Conheça a JSTECH <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container cta-inner">
+    <div><span class="eyebrow">VAMOS CONVERSAR?</span><h2>Seu próximo projeto pode começar aqui.</h2><p>Conte o que você precisa. Vamos explorar como a tecnologia pode ajudar.</p></div>
+    <a class="btn-primary" routerLink="/contato">Falar com a JSTECH <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
