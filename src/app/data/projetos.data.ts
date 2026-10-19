@@ -14,37 +14,27 @@ export const MEUS_PROJETOS: Projeto[] = [
     // para baixo e meus textes
     {
         id: 2,
-        titulo: 'Sistema Fitness',
+        titulo: 'StartTreino',
         descricaoCurta: 'App de treino completo com acompanhamento de progresso.',
         descricaoCompleta: 'Sistema desenvolvido para gerenciar treinos e acompanhar o progresso dos usuários.',
-        tecnologias: ['Flutter', 'Firebase'],
-        imagemUrl: 'projetos/fitness.webp', 
+        tecnologias: ['Angular', 'Node.js', 'MongoDB'],
+        imagemUrl: 'projetos/starttreino.png', 
         linkGithub: 'https://github.com/wellingtmax/tetris_py.git',
-        linkDemo: 'https://tetrispy--wellingtmax.replit.app/'
+        linkDemo: 'https://play.google.com/store/apps/details?id=br.com.starttreino.app&pcampaignid=web_share'
     },
     {
         id: 3,
-        titulo: 'IA Futebol',
-        descricaoCurta: 'Análise com inteligência artificial...',
-        descricaoCompleta: 'Projeto desenvolvido para analisar desempenho de jogadores e times.',
-        tecnologias: ['Python', 'ML'],
-        imagemUrl: 'projetos/ia_futebol.webp',
-        linkGithub: 'https://github.com/wellingtmax/ia_futebol.git',
-        linkDemo: 'https://iafutebol--wellingtmax.replit.app/'
-    },
-    {
-        id: 4,
-        titulo: 'E-commerce Angular',
-        descricaoCurta: 'Loja online com Angular e Firebase.',
-        descricaoCompleta: 'Projeto desenvolvido para criar uma loja online com Angular e Firebase.',
+        titulo: 'Cola&Troca',
+        descricaoCurta: 'Sua plataforma digital de albuns e figurinhas.',
+        descricaoCompleta: 'O Cola&Troca transforma o colecionismo em uma experiencia digital com albuns interativos, games, packs de figurinhas, chat global, trocas entre usuarios, sistema de XP, niveis e recompensas.',
         tecnologias: ['Angular', 'Firebase'],
-        imagemUrl: 'projetos/ecomerce.webp',
+        imagemUrl: 'projetos/colaetroca.png',
         linkGithub: 'https://github.com/wellingtmax/ecommerce_angular.git',
-        linkDemo: 'https://ecommerceangular--wellingtmax.replit.app/'
+        linkDemo: 'https://www.colaetroca.com/home'
 
     },
     {
-        id: 5,
+        id: 4,
         titulo: 'Chatbot IA',
         descricaoCurta: 'Chatbot inteligente para atendimento ao cliente.',
         descricaoCompleta: 'Projeto desenvolvido para criar um chatbot inteligente para atendimento ao cliente.',
@@ -54,7 +44,7 @@ export const MEUS_PROJETOS: Projeto[] = [
         linkDemo: 'https://chatbotia--wellingtmax.replit.app/'
     },
     {
-        id: 6,
+        id: 5,
         titulo: 'App Clima',
         descricaoCurta: 'Aplicativo de previsão do tempo com API.',
         descricaoCompleta: 'Projeto desenvolvido para criar um aplicativo de previsão do tempo utilizando uma API de clima.',
@@ -65,14 +55,14 @@ export const MEUS_PROJETOS: Projeto[] = [
 
     },
     {
-        id: 7,
-        titulo: 'Blog Angular',
-        descricaoCurta: 'Plataforma de blog com Angular e Node.js.',
-        descricaoCompleta: 'Projeto desenvolvido para criar uma plataforma de blog utilizando Angular para o frontend e Node.js para o backend.',
-        tecnologias: ['Angular', 'Node.js'],
-        imagemUrl: 'projetos/blog.jfif',
-        linkGithub: 'https://github.com/wellingtmax/blog_angular.git',
-        linkDemo: 'https://blogangular--wellingtmax.replit.app/'
+        id: 6,
+        titulo: 'StartPlantão',
+        descricaoCurta: 'Organize sua rotina de plantões de forma simples.',
+        descricaoCompleta: 'O StartPlantão foi desenvolvido para profissionais que trabalham com escalas, turnos e plantões e precisam reunir agenda, vínculos profissionais e controle financeiro em um único aplicativo.',
+        tecnologias: ['Angular', 'Node.js', 'MongoDB'],
+        imagemUrl: 'projetos/startplantao.png',
+        linkGithub: 'https://github.com/wellingtmax',
+        linkDemo: 'https://play.google.com/store/apps/details?id=br.com.jstech.startplantao&pcampaignid=web_share'
 
     }
 ]
