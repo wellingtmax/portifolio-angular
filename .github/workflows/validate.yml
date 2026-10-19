@@ -18,4 +18,12 @@ jobs:
       - name: Instalar dependências
         run: npm ci
       - name: Compilar aplicação
-        run: npm run build
+        run: npm run build -- --base-href=/portifolio-angular/
+      - name: Validar arquivos da publicacao estatica
+        run: |
+          test -f dist/portifolio/browser/index.html
+          test -f dist/portifolio/browser/projetos/jstech.png
+          test -f dist/portifolio/browser/sobre/index.html
+          test -f dist/portifolio/browser/projetos/index.html
+          test -f dist/portifolio/browser/contato/index.html
+          grep -q "/portifolio-angular/" dist/portifolio/browser/index.html
