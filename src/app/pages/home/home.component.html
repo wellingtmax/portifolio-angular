@@ -17,7 +17,11 @@
 
                     <!-- os cards aqui -->
                     <div class="card-pro" *ngFor="let item of carouselItems">
-                        <img [src]="item.imagemUrl" alt="projetos" class="card-image">
+                        <img *ngIf="item.imagemUrl" [src]="item.imagemUrl" [alt]="'Capa de ' + item.titulo" class="card-image">
+                        <div *ngIf="!item.imagemUrl" class="card-visual" [style.--accent]="item.cor">
+                            <span class="visual-emoji" aria-hidden="true">{{ item.icone }}</span>
+                            <span class="visual-caption">{{ item.categoria }}</span>
+                        </div>
 
                         <div class="card-content">
                             <h2>{{ item.titulo }}</h2>
