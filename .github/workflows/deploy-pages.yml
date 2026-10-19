@@ -1,0 +1,57 @@
+name: Publicar JSTECH no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compilar site estatico
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter codigo
+        uses: actions/checkout@v4
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Compilar Angular para a subpasta do repositorio
+        run: npm run build -- --base-href=/portifolio-angular/
+      - name: Preparar rotas e arquivos estaticos
+        shell: bash
+        run: |
+          test -f dist/portifolio/browser/index.html
+          test -f dist/portifolio/browser/projetos/jstech.png
+          grep -q '/portifolio-angular/' dist/portifolio/browser/index.html
+          cp dist/portifolio/browser/index.html dist/portifolio/browser/404.html
+          touch dist/portifolio/browser/.nojekyll
+      - name: Publicar artefato estatico
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/portifolio/browser
+
+  deploy:
+    name: Publicar no GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar site
+        id: deployment
+        uses: actions/deploy-pages@v4
