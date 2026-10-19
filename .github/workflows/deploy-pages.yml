@@ -16,6 +16,9 @@ jobs:
   build:
     name: Compilar site estatico
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
     steps:
       - name: Obter codigo
         uses: actions/checkout@v4
@@ -24,6 +27,8 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
       - name: Instalar dependencias
         run: npm ci
       - name: Compilar Angular para a subpasta do repositorio
