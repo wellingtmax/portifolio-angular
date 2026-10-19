@@ -1,59 +1,50 @@
-# Portifolio
+# JSTECH — Site institucional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.23.
+Site institucional e vitrine dos aplicativos, sistemas e projetos digitais da **JSTECH**.
 
-## Development server
+## Tecnologias
 
-To start a local development server, run:
+- Angular 19 (standalone)
+- Angular Material (janelas de detalhes)
+- CSS responsivo, sem biblioteca adicional de UI
+- Renderização no servidor (SSR) conforme configuração original do repositório
 
-```bash
-ng serve
-```
+## Rodar localmente
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Requisitos: Node.js compatível com Angular 19 e npm.
 
 ```bash
-ng generate component component-name
+npm ci
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Acesse `http://localhost:4200`.
+
+## Verificar compilação de produção
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+## Organização
 
-To build the project run:
+- `src/app/pages/home/` — apresentação institucional e produtos em destaque
+- `src/app/pages/sobre/` — soluções, abordagem de trabalho e tecnologias
+- `src/app/pages/projetos/` — catálogo pesquisável por categorias
+- `src/app/pages/contato/` — canais de contato reais
+- `src/app/data/projetos.data.ts` — conteúdo dos produtos e projetos
+- `public/jstech-mark.svg` — **símbolo provisório** com azul e vermelho da paleta anterior do site
+- `src/styles.css` — tokens da identidade JSTECH
 
-```bash
-ng build
-```
+## Orientações de manutenção
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. Antes de publicar, substitua o símbolo provisório pelo **logotipo oficial JSTECH**, quando disponível, e ajuste as variáveis de cores para as cores oficiais da marca.
+2. Mantenha as imagens reais dos produtos em `public/projetos/`.
+3. Cadastre apenas URLs de demonstração e repositórios públicos que realmente correspondam a cada projeto.
+4. Confirme os canais comerciais: o WhatsApp e o e-mail atuais foram preservados do site anterior.
+5. Não exiba números de clientes, avaliações, depoimentos ou cases sem autorização/comprovação.
+6. Os projetos ainda em desenvolvimento não devem aparecer como produtos disponíveis ao público.
 
-## Running unit tests
+## Observações
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Esta proposta de redesign foi criada a partir da `main` após as atualizações do catálogo feitas pelo autor em 19/10/2026. A validação de produção deve ser realizada antes do merge/deploy.
