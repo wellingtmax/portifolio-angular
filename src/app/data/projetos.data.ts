@@ -1,68 +1,157 @@
-import { Projeto } from "../interface/projetoInterface";
+import { Projeto } from '../interface/projetoInterface';
 
+// Catálogo institucional da JSTECH.
+// URLs de Play Store e produtos preservadas da última atualização feita na main.
+// Repositórios privados não têm URL pública; não inventar demos ou avaliações.
 export const MEUS_PROJETOS: Projeto[] = [
-    {
-        id: 1,
-        titulo: 'Tetris Python',
-        descricaoCurta: 'Clássico Tetris desenvolvido com lógica pura e interface gráfica.',
-        descricaoCompleta: 'Projeto desenvolvido para praticar matrizes e colisão em Python. Possui sistema de níveis e pontuação.',
-        tecnologias: ['Python', 'Pygame'],
-        imagemUrl: 'projetos/tetris.jpeg', 
-        linkGithub: 'https://github.com/wellingtmax/tetris_py.git',
-        linkDemo: 'https://tetrispy--wellingtmax.replit.app/'
-    },
-    // para baixo e meus textes
-    {
-        id: 2,
-        titulo: 'StartTreino',
-        descricaoCurta: 'App de treino completo com acompanhamento de progresso.',
-        descricaoCompleta: 'Sistema desenvolvido para gerenciar treinos e acompanhar o progresso dos usuários.',
-        tecnologias: ['Angular', 'Node.js', 'MongoDB'],
-        imagemUrl: 'projetos/starttreino.png', 
-        linkGithub: 'https://github.com/wellingtmax/tetris_py.git',
-        linkDemo: 'https://play.google.com/store/apps/details?id=br.com.starttreino.app&pcampaignid=web_share'
-    },
-    {
-        id: 3,
-        titulo: 'Cola&Troca',
-        descricaoCurta: 'Sua plataforma digital de albuns e figurinhas.',
-        descricaoCompleta: 'O Cola&Troca transforma o colecionismo em uma experiencia digital com albuns interativos, games, packs de figurinhas, chat global, trocas entre usuarios, sistema de XP, niveis e recompensas.',
-        tecnologias: ['Angular', 'Firebase'],
-        imagemUrl: 'projetos/colaetroca.png',
-        linkGithub: 'https://github.com/wellingtmax/ecommerce_angular.git',
-        linkDemo: 'https://www.colaetroca.com/home'
-
-    },
-    {
-        id: 4,
-        titulo: 'Chatbot IA',
-        descricaoCurta: 'Chatbot inteligente para atendimento ao cliente.',
-        descricaoCompleta: 'Projeto desenvolvido para criar um chatbot inteligente para atendimento ao cliente.',
-        tecnologias: ['Python', 'NLP'],
-        imagemUrl: 'projetos/chatbot.png',
-        linkGithub: 'https://github.com/wellingtmax/chatbot_ia.git',
-        linkDemo: 'https://chatbotia--wellingtmax.replit.app/'
-    },
-    {
-        id: 5,
-        titulo: 'App Clima',
-        descricaoCurta: 'Aplicativo de previsão do tempo com API.',
-        descricaoCompleta: 'Projeto desenvolvido para criar um aplicativo de previsão do tempo utilizando uma API de clima.',
-        tecnologias: ['Flutter', 'API'],
-        imagemUrl: 'projetos/clima.jpeg',
-        linkGithub: 'https://github.com/wellingtmax/app-clima',
-        linkDemo: 'https://stately-jalebi-5c13c7.netlify.app/'
-
-    },
-    {
-        id: 6,
-        titulo: 'StartPlantão',
-        descricaoCurta: 'Organize sua rotina de plantões de forma simples.',
-        descricaoCompleta: 'O StartPlantão foi desenvolvido para profissionais que trabalham com escalas, turnos e plantões e precisam reunir agenda, vínculos profissionais e controle financeiro em um único aplicativo.',
-        tecnologias: ['Angular', 'Node.js', 'MongoDB'],
-        imagemUrl: 'projetos/startplantao.png',
-        linkGithub: 'https://github.com/wellingtmax',
-        linkDemo: 'https://play.google.com/store/apps/details?id=br.com.jstech.startplantao&pcampaignid=web_share'
-
-    }
-]
+  {
+    id: 1,
+    titulo: 'StartTreino',
+    descricaoCurta: 'Treinos organizados, acompanhamento de evolução e controle da rotina fitness.',
+    descricaoCompleta: 'Aplicativo Android de organização de treinos, registro de séries e acompanhamento de evolução. Uma solução desenvolvida para simplificar a rotina de quem treina.',
+    tecnologias: ['Angular', 'Ionic', 'Capacitor', 'Android'],
+    imagemUrl: '/projetos/starttreino.png',
+    linkGithub: '',
+    linkDemo: 'https://play.google.com/store/apps/details?id=br.com.starttreino.app&pcampaignid=web_share',
+    categoria: 'Aplicativos',
+    status: 'Disponível',
+    icone: 'ST',
+    cor: '#2563eb',
+    destaque: true
+  },
+  {
+    id: 2,
+    titulo: 'StartPlantão',
+    descricaoCurta: 'Gestão de escalas, plantões e organização financeira em um só aplicativo.',
+    descricaoCompleta: 'Aplicativo para profissionais que trabalham com escalas, turnos e plantões. Organiza compromissos, extras, vínculos profissionais e controle financeiro mensal, com foco em praticidade e uso offline.',
+    tecnologias: ['Angular', 'Ionic', 'Capacitor', 'SQLite'],
+    imagemUrl: '/projetos/startplantao.png',
+    linkGithub: '',
+    linkDemo: 'https://play.google.com/store/apps/details?id=br.com.jstech.startplantao&pcampaignid=web_share',
+    categoria: 'Aplicativos',
+    status: 'Disponível',
+    icone: 'SP',
+    cor: '#10b981',
+    destaque: true
+  },
+  {
+    id: 3,
+    titulo: 'Cola&Troca',
+    descricaoCurta: 'Álbuns digitais, figurinhas, comunidade e experiências interativas.',
+    descricaoCompleta: 'Plataforma digital de álbuns e figurinhas com coleções interativas, troca entre usuários, funcionalidades sociais e experiências gamificadas. Projeto com acesso público ao produto.',
+    tecnologias: ['Angular', 'TypeScript', 'Web'],
+    imagemUrl: '/projetos/colaetroca.png',
+    linkGithub: '',
+    linkDemo: 'https://www.colaetroca.com/home',
+    categoria: 'Plataformas',
+    status: 'Disponível',
+    icone: 'CT',
+    cor: '#db2777',
+    destaque: true
+  },
+  {
+    id: 4,
+    titulo: 'SmartÓrbita',
+    descricaoCurta: 'Plataforma multiempresa de gestão comercial e serviços.',
+    descricaoCompleta: 'Solução SaaS multiempresa e multissegmento em desenvolvimento. A arquitetura prevê gestão administrativa e evolução para catálogo, pedidos, serviços e agendamentos, com isolamento por empresa e permissões de acesso.',
+    tecnologias: ['Angular', 'NestJS', 'Prisma', 'PostgreSQL'],
+    imagemUrl: '',
+    linkGithub: '',
+    linkDemo: '',
+    categoria: 'Plataformas',
+    status: 'Em desenvolvimento',
+    icone: 'SO',
+    cor: '#7c3aed',
+    destaque: true
+  },
+  {
+    id: 5,
+    titulo: 'StartLar',
+    descricaoCurta: 'Organização doméstica para compras, despensa e atividades da casa.',
+    descricaoCompleta: 'Aplicativo Android em desenvolvimento. A estrutura de navegação, identidade visual e temas já foram implementados para apoiar futuras funcionalidades de compras, despensa e rotina doméstica.',
+    tecnologias: ['Angular', 'Ionic', 'Capacitor'],
+    imagemUrl: '',
+    linkGithub: '',
+    linkDemo: '',
+    categoria: 'Aplicativos',
+    status: 'Em desenvolvimento',
+    icone: 'SL',
+    cor: '#ea580c',
+    destaque: false
+  },
+  {
+    id: 6,
+    titulo: 'Automação de Agendamentos',
+    descricaoCurta: 'Extensão para preparar preenchimentos recorrentes no portal PROEIS.',
+    descricaoCompleta: 'Extensão de navegador que organiza modelos e automatiza a preparação de formulários do PROEIS. A confirmação da inscrição e a solução de CAPTCHA permanecem manuais, no portal oficial.',
+    tecnologias: ['JavaScript', 'Chrome Extension', 'Manifest V3'],
+    imagemUrl: '',
+    linkGithub: '',
+    linkDemo: '',
+    categoria: 'Automação',
+    status: 'Em desenvolvimento',
+    icone: 'AG',
+    cor: '#d97706',
+    destaque: false
+  },
+  {
+    id: 7,
+    titulo: 'Sistema Lotofácil',
+    descricaoCurta: 'Ferramentas em Python para estudo e organização de combinações.',
+    descricaoCompleta: 'Software em Python para organização e estudo de dados de jogos, com estrutura de testes e empacotamento. Não prevê resultados nem garante premiações.',
+    tecnologias: ['Python', 'Análise de dados', 'Desktop'],
+    imagemUrl: '',
+    linkGithub: '',
+    linkDemo: '',
+    categoria: 'Dados & IA',
+    status: 'Em desenvolvimento',
+    icone: 'LF',
+    cor: '#0d9488',
+    destaque: false
+  },
+  {
+    id: 8,
+    titulo: 'App Clima',
+    descricaoCurta: 'Interface web para consulta de informações meteorológicas.',
+    descricaoCompleta: 'Aplicação desenvolvida com Angular e integração de API, com uma experiência direta para consulta de informações do tempo.',
+    tecnologias: ['Angular', 'TypeScript', 'API'],
+    imagemUrl: '/projetos/clima.jpeg',
+    linkGithub: 'https://github.com/wellingtmax/app-clima',
+    linkDemo: 'https://stately-jalebi-5c13c7.netlify.app/',
+    categoria: 'Plataformas',
+    status: 'Projeto desenvolvido',
+    icone: 'AC',
+    cor: '#0284c7',
+    destaque: false
+  },
+  {
+    id: 9,
+    titulo: 'Chatbot IA',
+    descricaoCurta: 'Experimento de interface conversacional para aplicações de IA.',
+    descricaoCompleta: 'Estudo de aplicações conversacionais e experiência de usuário com interface Angular. Funcionalidades comerciais e demonstração pública estão em avaliação.',
+    tecnologias: ['Angular', 'TypeScript', 'IA'],
+    imagemUrl: '/projetos/chatbot.png',
+    linkGithub: 'https://github.com/wellingtmax/karkara-ia-frontend',
+    linkDemo: '',
+    categoria: 'Dados & IA',
+    status: 'Protótipo',
+    icone: 'AI',
+    cor: '#8b5cf6',
+    destaque: false
+  },
+  {
+    id: 10,
+    titulo: 'Tetris Python',
+    descricaoCurta: 'Recriação do clássico Tetris para explorar lógica e interatividade.',
+    descricaoCompleta: 'Projeto em Python para estudo de movimentação, colisão de peças, pontuação e níveis em um jogo de tabuleiro.',
+    tecnologias: ['Python', 'Pygame'],
+    imagemUrl: '/projetos/tetris.jpeg',
+    linkGithub: 'https://github.com/wellingtmax/tetris_py',
+    linkDemo: '',
+    categoria: 'Jogos',
+    status: 'Projeto desenvolvido',
+    icone: 'TP',
+    cor: '#6366f1',
+    destaque: false
+  }
+];
