@@ -26,6 +26,30 @@ Acesse `http://localhost:4200`.
 npm run build
 ```
 
+## Publicar no GitHub Pages
+
+O site está configurado para o endereço:
+
+https://wellingtmax.github.io/portifolio-angular/
+
+O **GitHub Pages** disponibiliza arquivos estáticos, não executa o servidor Node.js do Angular. O workflow publica apenas `dist/portifolio/browser`, incluindo as páginas pré-renderizadas.
+
+1. No repositório do GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. As alterações enviadas à branch `main` executam automaticamente `.github/workflows/deploy-pages.yml`.
+4. Acompanhe **Actions → Publicar JSTECH no GitHub Pages** para confirmar a publicação.
+
+O build utiliza `npm run build -- --base-href=/portifolio-angular/`. As imagens usam URLs relativas à base para funcionar também no desenvolvimento local. A publicação gera `404.html` para permitir que o Angular trate navegação direta em rotas.
+
+Para testar localmente o mesmo build do Pages:
+
+```bash
+npm ci
+npm run build -- --base-href=/portifolio-angular/
+```
+
+**Segurança:** a versão Angular 19 ainda possui avisos de `npm audit`. Planejar migração para uma versão suportada antes de ampliar as funcionalidades públicas. O Pages publica apenas a aplicação estática, não o servidor SSR.
+
 ## Organização
 
 - `src/app/pages/home/` — apresentação institucional e produtos em destaque
