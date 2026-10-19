@@ -1,56 +1,28 @@
 <footer class="footer">
-  <div class="footer-container">
-
+  <div class="container footer-main">
     <div class="footer-brand">
-      <p>Desenvolvedor Full Stack</p>
-
-      <div class="tech-icons">
-        <img src="icons/angular-brands-solid.png" width="35">
-        <img src="icons/node-js-brands-solid.png" width="35">
-        <img src="icons/python-brands-solid.png" width="35">
-        <img src="icons/icons8-nestjs-48.png" width="35">
-        <img src="icons/typescript-brands-solid.png" width="35">
-        <img src="icons/square-js-brands-solid.png" width="35">
-        <img src="icons/icons8-data-base-96.png" width="35">
-        <img src="icons/bootstrap-brands-solid.png" width="35">
-        <img src="icons/icons8-react-80.png" width="35">
-        <img src="icons/c.png" width="35">
-        <img src="icons/icons8-c.png" width="35">
-        <img src="icons/icons8-c-96.png" width="35">
-        <img src="icons/java.png" width="35">
-        <img src="icons/dart.png" width="35">
-      </div>
+      <a class="footer-logo" routerLink="/" aria-label="JSTECH início">
+        <img src="projetos/jstech.png" width="56" height="56" alt="Símbolo oficial da JSTECH">
+        <strong>JS<span>TECH</span></strong>
+      </a>
+      <p>Tecnologia aplicada a desafios reais. Desenvolvemos aplicativos, plataformas e soluções digitais com foco em utilidade e evolução.</p>
     </div>
-    <div class="footer-social">
-      <h3>Redes</h3>
-      <div class="icons">
-        <!-- <a href="https://www.facebook.com/JHOTA94" target="_blank">
-          <img src="icons/facebook-f-brands-solid.png" width="40">
-        </a> -->
-        <a href="https://www.linkedin.com/in/wellington-j-oliveira-b431b6b1/" target="_blank">
-          <img src="icons/square-linkedin-brands-solid.png" width="40">
-        </a>
-
-        <a href="https://www.instagram.com/jhota_94/" target="_blank">
-          <img src="icons/instagram-brands-solid.png" width="40">
-        </a>
-        <a href="https://github.com/wellingtmax" target="_blank">
-          <img src="icons/github-brands-solid.png" width="40">
-        </a>
-
-        <!-- <a href="https://twitter.com" target="_blank">
-          <img src="icons/x-twitter-brands-solid.png" width="40">
-        </a> -->
-
-        <a href="https://wa.me/5524999946786" target="_blank">
-          <img src="icons/whatsapp-brands-solid.png" width="40">
-        </a>
-      </div>
+    <div class="footer-column">
+      <h3>Navegação</h3>
+      <a routerLink="/">Início</a>
+      <a routerLink="/sobre">Soluções</a>
+      <a routerLink="/projetos">Produtos e projetos</a>
+      <a routerLink="/contato">Contato</a>
     </div>
-
+    <div class="footer-column">
+      <h3>Converse com a gente</h3>
+      <a href="mailto:wellingtmax@gmail.com">E-mail</a>
+      <a href="https://wa.me/5524999946786?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20as%20solu%C3%A7%C3%B5es%20da%20JSTECH." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+      <a href="https://github.com/wellingtmax" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
   </div>
-  <div class="footer-bottom">
-    © 2026 J <a routerLink="/matrix">°¹°°¹°¹°</a> DEV - Todos os direitos reservados
+  <div class="footer-bottom container">
+    <span>© {{ anoAtual }} JSTECH. Todos os direitos reservados.</span>
+    <span>Software com propósito. Tecnologia com resultado.</span>
   </div>
-
 </footer>

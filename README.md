@@ -1,59 +1,74 @@
-# Portifolio
+# JSTECH — Site institucional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.23.
+Site institucional e vitrine dos aplicativos, sistemas e projetos digitais da **JSTECH**.
 
-## Development server
+## Tecnologias
 
-To start a local development server, run:
+- Angular 19 (standalone)
+- Angular Material (janelas de detalhes)
+- CSS responsivo, sem biblioteca adicional de UI
+- Renderização no servidor (SSR) conforme configuração original do repositório
 
-```bash
-ng serve
-```
+## Rodar localmente
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Requisitos: Node.js compatível com Angular 19 e npm.
 
 ```bash
-ng generate component component-name
+npm ci
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Acesse `http://localhost:4200`.
+
+## Verificar compilação de produção
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+## Publicar no GitHub Pages
 
-To build the project run:
+O site está configurado para o endereço:
+
+https://wellingtmax.github.io/portifolio-angular/
+
+O **GitHub Pages** disponibiliza arquivos estáticos, não executa o servidor Node.js do Angular. O workflow publica apenas `dist/portifolio/browser`, incluindo as páginas pré-renderizadas.
+
+1. No repositório do GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+3. As alterações enviadas à branch `main` executam automaticamente `.github/workflows/deploy-pages.yml`.
+4. Acompanhe **Actions → Publicar JSTECH no GitHub Pages** para confirmar a publicação.
+
+O build utiliza `npm run build -- --base-href=/portifolio-angular/`. As imagens usam URLs relativas à base para funcionar também no desenvolvimento local. A publicação gera `404.html` para permitir que o Angular trate navegação direta em rotas.
+
+Para testar localmente o mesmo build do Pages:
 
 ```bash
-ng build
+npm ci
+npm run build -- --base-href=/portifolio-angular/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Segurança:** a versão Angular 19 ainda possui avisos de `npm audit`. Planejar migração para uma versão suportada antes de ampliar as funcionalidades públicas. O Pages publica apenas a aplicação estática, não o servidor SSR.
 
-## Running unit tests
+## Organização
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- `src/app/pages/home/` — apresentação institucional e produtos em destaque
+- `src/app/pages/sobre/` — soluções, abordagem de trabalho e tecnologias
+- `src/app/pages/projetos/` — catálogo pesquisável por categorias
+- `src/app/pages/contato/` — canais de contato reais
+- `src/app/data/projetos.data.ts` — conteúdo dos produtos e projetos
+- `public/projetos/jstech.png` — símbolo oficial enviado pelo autor; cabeçalho, Sobre, rodapé e favicon
+- `src/styles.css` — tokens da identidade JSTECH
 
-```bash
-ng test
-```
+## Orientações de manutenção
 
-## Running end-to-end tests
+1. A identidade visual oficial JSTECH utiliza azul-ciano, azul elétrico, branco e fundo escuro. Use o mesmo símbolo da pasta `public/projetos/jstech.png` em toda a comunicação.
+2. Mantenha as imagens reais dos produtos em `public/projetos/`.
+3. Cadastre apenas URLs de demonstração e repositórios públicos que realmente correspondam a cada projeto.
+4. Confirme os canais comerciais: o WhatsApp e o e-mail atuais foram preservados do site anterior.
+5. Não exiba números de clientes, avaliações, depoimentos ou cases sem autorização/comprovação.
+6. Os projetos ainda em desenvolvimento não devem aparecer como produtos disponíveis ao público.
 
-For end-to-end (e2e) testing, run:
+## Observações
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Esta proposta de redesign foi criada a partir da `main` após as atualizações do catálogo feitas pelo autor em 19/10/2026. A validação de produção deve ser realizada antes do merge/deploy.

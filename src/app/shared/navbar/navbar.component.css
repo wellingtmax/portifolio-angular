@@ -1,58 +1,42 @@
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: linear-gradient(90deg, #2a66d6af,#000000, #db0c0cde);
-    color: #fff;
-
-    /* efeito premium */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 5px 30px rgba(255, 0, 0, 0.603);
+:host { display:block; position:sticky; top:0; z-index:50; }
+.site-header { background:rgba(6,17,32,.96); border-bottom:1px solid rgba(4,204,247,.17); backdrop-filter:blur(22px); box-shadow:0 8px 28px rgba(0,0,0,.12); }
+.nav-shell { min-height:92px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
+.brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0; min-width:0; }
+.brand-logo { display:block; width:66px; height:66px; object-fit:cover; border-radius:50%; clip-path:circle(49% at center); background:#00030e; box-shadow:0 0 19px rgba(0,202,245,.15); }
+.brand-wordmark { display:flex; flex-direction:column; line-height:1; }
+.brand-wordmark strong { font-family:Manrope,Arial,sans-serif; font-size:25px; letter-spacing:-.065em; color:#fafdff; }
+.brand-wordmark strong span { color:#08c9f4; }
+.brand-wordmark small { font-size:8px; letter-spacing:.21em; font-weight:800; margin-top:9px; color:#91b0cf; }
+.nav-links { display:flex; align-items:center; gap:23px; }
+.nav-links > a { font-size:13px; color:#bacbdf; text-decoration:none; font-weight:700; transition:color .2s; white-space:nowrap; }
+.nav-links > a:hover,.nav-links > a.active { color:#fff; }
+.nav-links > a.active:not(.header-cta) { box-shadow:0 2px 0 #00c8f3; padding-bottom:6px; margin-bottom:-6px; }
+.nav-links > a.header-cta { background:linear-gradient(120deg,#075a9b,#067ebc); color:#fff; padding:12px 16px; border:1px solid #11bfea; border-radius:9px; white-space:nowrap; }
+.header-cta span { padding-left:5px; color:#9eecff; }
+.menu-toggle { display:none; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; background:transparent; border:1px solid var(--line); border-radius:9px; }
+.menu-toggle span { width:20px; height:2px; margin-left:10px; background:#fff; }
+@media(max-width:1080px) {
+ .nav-links { gap:13px; }
+ .nav-links > a { font-size:12px; }
+ .brand-wordmark strong { font-size:22px; }
+ .brand-wordmark small { font-size:7px; }
+ .brand-logo { width:58px; height:58px; }
 }
-
-.titulo-dev {
-  background: linear-gradient(45deg, #ff0000, #001aff);
-
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  color: transparent;
+@media(max-width:950px) {
+ .nav-shell { min-height:80px; }
+ .brand-logo { width:60px; height:60px; }
+ .brand-wordmark strong { font-size:23px; }
+ .brand-wordmark small { font-size:8px; }
+ .menu-toggle { display:flex; }
+ .nav-links { display:none; position:absolute; top:80px; left:0; right:0; background:#09182b; border-bottom:1px solid #124e68; flex-direction:column; gap:0; align-items:stretch; padding:14px 20px 20px; box-shadow:0 24px 35px rgba(0,0,0,.4); }
+ .nav-links.is-open { display:flex; }
+ .nav-links > a { padding:14px 10px; font-size:14px; }
+ .nav-links > a.active:not(.header-cta) { box-shadow:none; margin:0; padding:14px 10px; color:#06cef7; }
+ .nav-links > a.header-cta { text-align:center; margin-top:8px; }
 }
-
-ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    display: inline-block;
-    &:hover {
-        color: #ddd;
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 20px #000bac);
-    }
-}
-
-.profile-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1px solid #1130dd93;
-    box-shadow: 0 -35px 80px rgb(17, 0, 255);
-    position: relative;
-    bottom: 28px;
-    right: 30px;
+@media(max-width:380px) {
+ .brand { gap:8px; }
+ .brand-logo { width:50px; height:50px; }
+ .brand-wordmark strong { font-size:20px; }
+ .brand-wordmark small { letter-spacing:.12em; font-size:7px; }
 }

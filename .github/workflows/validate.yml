@@ -1,0 +1,29 @@
+name: Validar site JSTECH
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [feat/jstech-site-institucional]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Instalar dependências
+        run: npm ci
+      - name: Compilar aplicação
+        run: npm run build -- --base-href=/portifolio-angular/
+      - name: Validar arquivos da publicacao estatica
+        run: |
+          test -f dist/portifolio/browser/index.html
+          test -f dist/portifolio/browser/projetos/jstech.png
+          test -f dist/portifolio/browser/sobre/index.html
+          test -f dist/portifolio/browser/projetos/index.html
+          test -f dist/portifolio/browser/contato/index.html
+          grep -q "/portifolio-angular/" dist/portifolio/browser/index.html
