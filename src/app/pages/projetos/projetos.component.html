@@ -1,26 +1,71 @@
-<h1>Meus Projetos</h1>
-<div class="projeto-grid">
-  
-  <div class="card-pro" *ngFor="let projeto of meusProjetos" (click)="abrirDialog(projeto)">
-    
-    <img [src]="projeto.imagemUrl" [alt]="projeto.titulo" class="card-image">
-    
-    <div class="card-content">
-      <h2>{{ projeto.titulo }}</h2>
-      <p>{{ projeto.descricaoCurta }}</p>
-      
-      <div class="tags">
-        <span class="tag" *ngFor="let tech of projeto.tecnologias">
-          {{ tech }}
-        </span>
-      </div>
+<section class="portfolio-projects">
+  <div class="portfolio-header">
+    <div>
+      <span class="eyebrow">PORTFÓLIO / PROJETOS</span>
+      <h1>Ideias que viram <span>software.</span></h1>
+      <p>Aplicativos, sistemas, automações e experimentos que desenvolvi. Cada projeto representa um problema diferente e uma solução construída na prática.</p>
     </div>
-
-    <div class="card-footer">
-       <span class="view-details">CLIQUE PARA DETALHES</span>
-       <a class="github-link" [href]="projeto.linkGithub" target="_blank" (click)="$event.stopPropagation()">
-         <mat-icon>code</mat-icon>
-       </a>
+    <div class="projects-total">
+      <strong>{{ meusProjetos.length.toString().padStart(2, '0') }}</strong>
+      <span>projetos na vitrine</span>
     </div>
   </div>
-</div>
+
+  <div class="portfolio-toolbar">
+    <div class="category-buttons" aria-label="Filtrar projetos por categoria">
+      <button type="button" *ngFor="let categoria of categorias" (click)="selecionarCategoria(categoria)"
+        [class.active]="categoriaAtiva === categoria" [attr.aria-pressed]="categoriaAtiva === categoria">
+        {{ categoria }}
+      </button>
+    </div>
+    <label class="search-box">
+      <span class="sr-only">Pesquisar projetos</span>
+      <span aria-hidden="true">⌕</span>
+      <input type="search" placeholder="Buscar projeto ou tecnologia..." [value]="termoBusca"
+        (input)="buscar($any($event.target).value)">
+    </label>
+  </div>
+
+  <p class="results-count">{{ projetosFiltrados.length }} {{ projetosFiltrados.length === 1 ? 'projeto encontrado' : 'projetos encontrados' }}</p>
+
+  <div class="projeto-grid" *ngIf="projetosFiltrados.length; else estadoVazio">
+    <article class="card-pro" *ngFor="let projeto of projetosFiltrados">
+      <button type="button" class="project-open" (click)="abrirDialog(projeto)" [attr.aria-label]="'Abrir detalhes de ' + projeto.titulo">
+        <img *ngIf="projeto.imagemUrl" [src]="projeto.imagemUrl" [alt]="'Capa de ' + projeto.titulo" class="card-image">
+        <div *ngIf="!projeto.imagemUrl" class="card-visual" [style.--accent]="projeto.cor">
+          <span class="visual-decoration" aria-hidden="true"></span>
+          <span class="visual-emoji" aria-hidden="true">{{ projeto.icone }}</span>
+          <span class="visual-caption">{{ projeto.categoria }}</span>
+        </div>
+        <div class="card-content">
+          <div class="category-line">
+            <span>{{ projeto.categoria }}</span>
+            <span *ngIf="projeto.destaque" class="featured-dot">★ DESTAQUE</span>
+          </div>
+          <h2>{{ projeto.titulo }}</h2>
+          <p>{{ projeto.descricaoCurta }}</p>
+          <div class="tags">
+            <span class="tag" *ngFor="let tech of projeto.tecnologias">{{ tech }}</span>
+          </div>
+        </div>
+      </button>
+      <div class="card-footer">
+        <span class="project-status"><span class="status-dot"></span>{{ projeto.status }}</span>
+        <div class="actions">
+          <a *ngIf="projeto.linkGithub" class="source-link" [href]="projeto.linkGithub" target="_blank" rel="noopener noreferrer" [attr.aria-label]="'Código de ' + projeto.titulo + ' no GitHub'">GitHub ↗</a>
+          <a *ngIf="projeto.linkDemo" class="source-link" [href]="projeto.linkDemo" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+          <button type="button" class="details-link" (click)="abrirDialog(projeto)">Detalhes →</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <ng-template #estadoVazio>
+    <div class="empty-state">
+      <span aria-hidden="true">🔎</span>
+      <h2>Nenhum projeto encontrado</h2>
+      <p>Experimente outra palavra ou selecione uma categoria diferente.</p>
+      <button type="button" (click)="limparFiltros()">Limpar filtros</button>
+    </div>
+  </ng-template>
+</section>
