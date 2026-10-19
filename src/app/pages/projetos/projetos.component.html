@@ -1,26 +1,53 @@
-<h1>Meus Projetos</h1>
-<div class="projeto-grid">
-  
-  <div class="card-pro" *ngFor="let projeto of meusProjetos" (click)="abrirDialog(projeto)">
-    
-    <img [src]="projeto.imagemUrl" [alt]="projeto.titulo" class="card-image">
-    
-    <div class="card-content">
-      <h2>{{ projeto.titulo }}</h2>
-      <p>{{ projeto.descricaoCurta }}</p>
-      
-      <div class="tags">
-        <span class="tag" *ngFor="let tech of projeto.tecnologias">
-          {{ tech }}
-        </span>
-      </div>
-    </div>
-
-    <div class="card-footer">
-       <span class="view-details">CLIQUE PARA DETALHES</span>
-       <a class="github-link" [href]="projeto.linkGithub" target="_blank" (click)="$event.stopPropagation()">
-         <mat-icon>code</mat-icon>
-       </a>
-    </div>
+<section class="catalog-hero">
+  <div class="container">
+    <span class="eyebrow">NOSSO ECOSSISTEMA</span>
+    <h1>Produtos e <span>projetos.</span></h1>
+    <p class="lead">Soluções criadas para situações reais: aplicativos, plataformas, sistemas e experimentos de tecnologia. Conheça o que já está disponível e o que estamos desenvolvendo.</p>
   </div>
-</div>
+</section>
+
+<section class="catalog-content container">
+  <div class="catalog-toolbar">
+    <div class="filter-list" role="group" aria-label="Filtrar por categoria">
+      <button type="button" *ngFor="let categoria of categorias" [class.active]="categoriaAtiva === categoria"
+        [attr.aria-pressed]="categoriaAtiva === categoria" (click)="selecionarCategoria(categoria)">{{ categoria }}</button>
+    </div>
+    <label class="search-field">
+      <span class="sr-only">Buscar projetos pelo nome ou tecnologia</span>
+      <span aria-hidden="true">⌕</span>
+      <input type="search" [value]="termo" (input)="buscar($event)" placeholder="Buscar por nome ou tecnologia">
+    </label>
+  </div>
+
+  <div class="catalog-summary"><strong>{{ projetosFiltrados.length }}</strong> {{ projetosFiltrados.length === 1 ? 'projeto encontrado' : 'projetos encontrados' }}</div>
+
+  <div class="catalog-grid" *ngIf="projetosFiltrados.length; else semResultados">
+    <article class="project-card" *ngFor="let projeto of projetosFiltrados">
+      <button type="button" class="project-card-main" (click)="abrirDialog(projeto)" [attr.aria-label]="'Ver detalhes de ' + projeto.titulo">
+        <div class="project-cover" [style.--card-accent]="projeto.cor">
+          <img *ngIf="projeto.imagemUrl" [src]="projeto.imagemUrl" [alt]="'Capa do projeto ' + projeto.titulo" loading="lazy">
+          <span *ngIf="!projeto.imagemUrl" class="cover-monogram" aria-hidden="true">{{ projeto.icone }}</span>
+          <span class="cover-status">{{ projeto.status }}</span>
+        </div>
+        <div class="project-body">
+          <div class="project-topline"><span>{{ projeto.categoria }}</span><span *ngIf="projeto.destaque" class="highlight">EM DESTAQUE</span></div>
+          <h2>{{ projeto.titulo }}</h2>
+          <p>{{ projeto.descricaoCurta }}</p>
+          <div class="project-tags"><span *ngFor="let tecnologia of projeto.tecnologias">{{ tecnologia }}</span></div>
+        </div>
+      </button>
+      <div class="project-actions">
+        <button type="button" (click)="abrirDialog(projeto)">Detalhes <span aria-hidden="true">→</span></button>
+        <a *ngIf="projeto.linkGithub" [href]="projeto.linkGithub" target="_blank" rel="noopener noreferrer">Código ↗</a>
+        <a *ngIf="projeto.linkDemo" [href]="projeto.linkDemo" target="_blank" rel="noopener noreferrer">Acessar ↗</a>
+      </div>
+    </article>
+  </div>
+
+  <ng-template #semResultados>
+    <div class="empty-state"><span aria-hidden="true">⌕</span><h2>Nenhum projeto encontrado</h2><p>Tente outra palavra ou categoria.</p><button type="button" (click)="limparFiltros()">Limpar filtros</button></div>
+  </ng-template>
+</section>
+<section class="project-end">
+  <div class="container project-end-inner"><div><span class="eyebrow">IDEIAS NOVAS</span><h2>Precisa de uma solução diferente?</h2><p>Podemos conversar sobre o desafio do seu projeto.</p></div><a class="btn-primary" href="https://wa.me/5524999946786?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20para%20a%20JSTECH." target="_blank" rel="noopener noreferrer">Conversar no WhatsApp ↗</a></div>
+</section>
