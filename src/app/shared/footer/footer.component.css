@@ -1,9 +1,9 @@
 .footer { border-top:1px solid var(--line); background:#06101d; margin-top:auto; }
 .footer-main { display:grid; grid-template-columns:2fr 1fr 1fr; gap:60px; padding-top:65px; padding-bottom:55px; }
 .footer-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
-.footer-logo img { border-radius:10px; }
+.footer-logo img { width:56px; height:56px; object-fit:cover; border-radius:50%; clip-path:circle(49% at center); background:#00030e; }
 .footer-logo strong { font-family:Manrope,Arial,sans-serif; font-size:23px; letter-spacing:-.05em; color:white; }
-.footer-logo strong span { color:#7ab4ff; }
+.footer-logo strong span { color:#06ccf7; }
 .footer-brand p { max-width:340px; color:var(--muted); line-height:1.8; font-size:14px; margin-top:19px; }
 .footer-column { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
 .footer-column h3 { font-size:14px; color:white; margin:6px 0 10px; }
